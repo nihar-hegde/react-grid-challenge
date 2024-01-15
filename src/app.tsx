@@ -32,7 +32,7 @@ const App: React.FC = () => {
         <Button>Create Grid</Button>
       </form>
 
-      {size !== null && <Grid size={size} />}
+      {size !== null && <Grid size={size} key={size} />}
     </section>
   );
 };
