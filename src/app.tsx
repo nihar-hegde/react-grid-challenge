@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "./components/button";
 import { Input } from "./components/input";
 import { z } from "zod";
+import { Grid } from "./components/grid";
 
 const App: React.FC = () => {
   const [size, setSize] = React.useState<number | null>(null);
@@ -30,6 +31,8 @@ const App: React.FC = () => {
         </label>
         <Button>Create Grid</Button>
       </form>
+
+      {size !== null && <Grid size={size} />}
     </section>
   );
 };
